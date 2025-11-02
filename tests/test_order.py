@@ -10,7 +10,6 @@ class TestScooterOrder:
     def test_order_up_button_user1(self, driver):
         main_page = MainPage(driver)
         order_page = OrderPage(driver)
-        main_page.go_to_url(Urls.PAGE_MAIN)
         main_page.accept_cookies()
         main_page.click_btn_order_up()
         order_page.complete_scooter_order(User_1)
@@ -21,7 +20,6 @@ class TestScooterOrder:
     def test_order_low_button_user2(self, driver):
         main_page = MainPage(driver)
         order_page = OrderPage(driver)
-        main_page.go_to_url(Urls.PAGE_MAIN)
         main_page.accept_cookies()
         main_page.click_btn_order_low()
         order_page.complete_scooter_order(User_2)

@@ -7,8 +7,6 @@ class MainPageLocators:
     BTN_ORDER_LOW = (By.XPATH, ".//div[contains(@class, 'Home_FinishButton')]/button[text()='Заказать']") # Кнопки "Заказать" внизу страницы
     BTN_COOKIES = (By.ID, "rcc-confirm-button") # Кнопки куки "Да, всё привыкли"
     
-    DZEN = (By.XPATH, '//div[text()="Новости"]') # Локатор на странице Дзена
-    
     # Вопросы
     QQ_1 = (By.ID, "accordion__heading-0")
     QQ_2 = (By.ID, "accordion__heading-1")

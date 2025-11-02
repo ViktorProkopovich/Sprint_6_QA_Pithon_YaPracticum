@@ -65,3 +65,13 @@ class MainPage(BasePage):
     @allure.step("Клик по лого 'Самокат'")
     def click_scooter_logo(self):
         self.click_on_locator(OrderPageLocators.LOGO_SC)
+
+    @allure.step("Проверить, что открыта страница Дзена")
+    def is_dzen_opened(self, timeout=10):
+        import time
+        for _ in range(timeout):
+            current_url = self.get_current_url()
+            if "dzen.ru" in current_url:
+                return True
+            time.sleep(1)
+        return False
